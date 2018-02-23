@@ -62,7 +62,7 @@ export var Root = React.createClass({
 
 export function buildUrl(href) {
   if (_.isString(href)) return href;
-  return '?' + $.param(_.omit(href, _.isUndefined), true);
+  return '?' + $.param(_.omitBy(href, _.isUndefined), true);
 };
 
 

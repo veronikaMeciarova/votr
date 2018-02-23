@@ -54,7 +54,7 @@ export var App = React.createClass({
 
   handleClose() {
     if (Votr.ajaxError) return;
-    navigate(_.omit(
+    navigate(_.omitBy(
         this.props.query, (value, key) => key.substring(0, 5) == 'modal'));
   },
 
